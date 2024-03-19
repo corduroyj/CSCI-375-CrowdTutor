@@ -1,27 +1,28 @@
 import styles from './App.module.scss';
+import Classnames from 'classnames';
 
 function App() {
     return (
         <div className={styles.App}>
-            <h2>Welcome to your App Component 🎉</h2>
-            <span>
-                Double click to edit App component
-                <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p
-                style={{
-                    fontSize: '12px',
-                    marginTop: '80px',
-                    display: 'flex',
-                    gap: '3px',
-                    justifyContent: 'center',
-                }}
-            >
-                This project is using <img src="/src/assets/vite.svg" width="12" />+
-                <img src="/src/assets/typescript.svg" width="12" />
-                Visit vitejs.dev to learn more.
-            </p>
+            <div className={styles['login-form']}>
+                <div>
+                    <h1>Login</h1>
+                    <form className={styles['form-label']}>
+                        <label className={styles['form-label']}>First name:</label>
+                        <input type="text" className={styles['form-inputs']} />
+                        <hr className={styles['form-hr']} />
+                        <label>Last name:</label>
+                        <input type="text" className={styles['form-inputs']} />
+                        <hr className={styles['form-hr']} />
+                        <br />
+                        <input type="submit" value="LOGIN" className={styles['form-btn']} />
+                    </form>
+                </div>
+                <div>
+                    Don&apos;t have an account?
+                    <input type="submit" value="Create an Account" className={styles['create-btn']} />
+                </div>
+            </div>
         </div>
     );
 }
